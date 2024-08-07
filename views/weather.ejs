@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Result</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Weather in <%= city %></h1>
+    <div class="weather-details">
+        <ul>
+            <li><span>Temperature:</span> <%= details.temperature %> °C</li>
+            <li><span>Feels Like:</span> <%= details.feels_like %> °C</li>
+            <li><span>Description:</span> <%= details.description %></li>
+            <li><span>Humidity:</span> <%= details.humidity %> %</li>
+            <li><span>Wind Speed:</span> <%= details.wind_speed %> m/s</li>
+            <li><span>Cloudiness:</span> <%= details.clouds %> %</li>
+        </ul>
+    </div>
+    <a href="/" class="back-link">Check another city</a>
+</body>
+</html>
