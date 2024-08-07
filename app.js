@@ -1,5 +1,8 @@
 const express = require('express');
 const axios = require('axios');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const app = express();
 const port = 3000;
 
@@ -7,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-const API_KEY = '13e18eb97c9165d79f181b6ed1167643';
+const API_KEY = process.env.OPENWEATHERMAP_API_KEY;
 
 app.get('/', (req, res) => {
     res.render('index');
